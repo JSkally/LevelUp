@@ -32,12 +32,12 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. Admin can assign and change user roles (Athlete, Trainer, Admin, Assistant Coach) and the role is enforced at the API
   4. A tier-gated API endpoint returns 403 with upgrade context for unauthorized tiers, and the UI shows a locked state with upgrade prompt
   5. CI pipeline runs lint, type-check, test, and build on every push; mobile builds via EAS
-**Plans**: TBD
+**Plans**: 3 plans
 
 Plans:
-- [ ] 01-01: Monorepo scaffolding and CI/CD
-- [ ] 01-02: Auth and role system
-- [ ] 01-03: Subscription tiers and feature gating
+- [ ] 01-01-PLAN.md — Turborepo + pnpm monorepo scaffold, CI/CD pipeline, Docker dev environment, Wave 0 test stubs
+- [ ] 01-02-PLAN.md — Clerk auth on web + mobile + Fastify API, role assignment webhook, JWT role enforcement
+- [ ] 01-03-PLAN.md — JSONB subscription tier system, tier gate middleware, TierGate UI component, Caribbean currency display
 
 ### Phase 2: Coach Portal
 **Goal**: A trainer can build a complete program using the exercise library, organize athletes into teams, and assign programs -- the full coach web experience before any mobile athlete work.
