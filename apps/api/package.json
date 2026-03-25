@@ -1,0 +1,35 @@
+{
+  "name": "@repo/api",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "main": "./dist/server.js",
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src --ext .ts",
+    "test": "vitest run",
+    "dev": "tsx watch src/server.ts",
+    "start": "node dist/server.js"
+  },
+  "dependencies": {
+    "@clerk/fastify": "^2",
+    "@fastify/autoload": "^6",
+    "@repo/db": "workspace:*",
+    "@repo/shared": "workspace:*",
+    "@sentry/node": "^9",
+    "drizzle-orm": "^0.41.0",
+    "fastify": "^5",
+    "fastify-plugin": "^5",
+    "ioredis": "^5",
+    "pg": "^8.11.3",
+    "svix": "^1"
+  },
+  "devDependencies": {
+    "@types/pg": "^8.11.2",
+    "@vitest/coverage-v8": "^2",
+    "tsx": "^4",
+    "typescript": "^5",
+    "vitest": "^2"
+  }
+}

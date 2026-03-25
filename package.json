@@ -1,0 +1,31 @@
+{
+  "name": "level-monorepo",
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "typecheck": "turbo run typecheck",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "dev": "turbo run dev"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@typescript-eslint/eslint-plugin": "^8.57.2",
+    "@typescript-eslint/parser": "^8.57.2",
+    "eslint": "^8",
+    "prettier": "^3",
+    "turbo": "^2",
+    "typescript": "^5"
+  },
+  "pnpm": {
+    "overrides": {
+      "react": "18.3.1",
+      "react-native": "0.76.7"
+    }
+  },
+  "engines": {
+    "node": ">=20",
+    "pnpm": ">=9"
+  },
+  "packageManager": "pnpm@9.0.0"
+}

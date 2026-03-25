@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+.next/
+out/
+
+# Turbo cache
+.turbo/
+
+# Environment variables (never commit)
+.env
+.env.local
+.env.*.local
+
+# Expo
+.expo/
+expo-env.d.ts
+
+# pnpm
+pnpm-lock.yaml
+
+# TypeScript
+*.tsbuildinfo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Migrations (generated)
+packages/db/migrations/
+
+# Coverage
+coverage/
