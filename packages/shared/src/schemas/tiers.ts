@@ -1,5 +1,8 @@
 import { z } from 'zod'
 
+export const CARIBBEAN_CURRENCIES = ['JMD', 'TTD', 'BBD', 'GYD', 'BSD', 'XCD', 'USD'] as const
+export type CaribbeanCurrency = (typeof CARIBBEAN_CURRENCIES)[number]
+
 export const TierCapabilitiesSchema = z.object({
   messaging: z.boolean(),
   vbt: z.boolean(),
