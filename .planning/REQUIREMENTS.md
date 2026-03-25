@@ -20,13 +20,13 @@
 
 ### Authentication & User Management
 
-- [ ] **AUTH-01**: User can register with email/password via Clerk
-- [ ] **AUTH-02**: User can log in and maintain authenticated session across web and mobile
-- [ ] **AUTH-03**: User can reset password via email link
-- [ ] **AUTH-04**: JWT tokens validated at API middleware with role claims embedded
-- [ ] **AUTH-05**: Role assigned at registration or by admin: Athlete, Trainer, Admin, Assistant Coach
-- [ ] **AUTH-06**: Admin can promote/demote user roles from management dashboard
-- [ ] **AUTH-07**: Assistant Coach sub-role can view and log on behalf of assigned athletes but cannot create programs or modify tiers
+- [x] **AUTH-01**: User can register with email/password via Clerk
+- [x] **AUTH-02**: User can log in and maintain authenticated session across web and mobile
+- [x] **AUTH-03**: User can reset password via email link
+- [x] **AUTH-04**: JWT tokens validated at API middleware with role claims embedded
+- [x] **AUTH-05**: Role assigned at registration or by admin: Athlete, Trainer, Admin, Assistant Coach
+- [x] **AUTH-06**: Admin can promote/demote user roles from management dashboard
+- [x] **AUTH-07**: Assistant Coach sub-role can view and log on behalf of assigned athletes but cannot create programs or modify tiers
 
 ### Subscription Tiers
 
@@ -286,13 +286,13 @@
 | INFRA-05 | Phase 1 | Pending |
 | INFRA-06 | Phase 1 | Pending |
 | INFRA-07 | Phase 1 | Pending |
-| AUTH-01 | Phase 1 | Pending |
-| AUTH-02 | Phase 1 | Pending |
-| AUTH-03 | Phase 1 | Pending |
-| AUTH-04 | Phase 1 | Pending |
-| AUTH-05 | Phase 1 | Pending |
-| AUTH-06 | Phase 1 | Pending |
-| AUTH-07 | Phase 1 | Pending |
+| AUTH-01 | Phase 1 | Complete |
+| AUTH-02 | Phase 1 | Complete |
+| AUTH-03 | Phase 1 | Complete |
+| AUTH-04 | Phase 1 | Complete |
+| AUTH-05 | Phase 1 | Complete |
+| AUTH-06 | Phase 1 | Complete |
+| AUTH-07 | Phase 1 | Complete |
 | TIER-01 | Phase 1 | Pending |
 | TIER-02 | Phase 1 | Pending |
 | TIER-03 | Phase 1 | Pending |

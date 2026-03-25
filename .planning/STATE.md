@@ -1,3 +1,19 @@
+---
+gsd_state_version: 1.0
+milestone: v1.0
+milestone_name: milestone
+status: executing
+stopped_at: "Completed 01-02-PLAN.md (full Clerk auth pipeline: API + web + mobile)"
+last_updated: "2026-03-25T23:23:01.742Z"
+last_activity: 2026-03-25 — Plan 01 completed (monorepo scaffold)
+progress:
+  total_phases: 7
+  completed_phases: 0
+  total_plans: 3
+  completed_plans: 2
+  percent: 67
+---
+
 # Project State
 
 ## Project Reference
@@ -14,7 +30,7 @@ Plan: 1 of 3 in current phase
 Status: In progress
 Last activity: 2026-03-25 — Plan 01 completed (monorepo scaffold)
 
-Progress: [█░░░░░░░░░] 5% (1/21 plans complete)
+Progress: [███████░░░] 67%
 
 ## Performance Metrics
 
@@ -34,6 +50,7 @@ Progress: [█░░░░░░░░░] 5% (1/21 plans complete)
 - Trend: baseline
 
 *Updated after each plan completion*
+| Phase 01-foundation-auth P02 | 4 min | 2 tasks | 19 files |
 
 ## Accumulated Context
 
@@ -49,6 +66,9 @@ Recent decisions affecting current work:
 - 01-01: GIN index on subscriptionTiers.capabilities uses index().using('gin', column) — drizzle-orm 0.41.0 column-level .on() fails for jsonb
 - 01-01: rootDir omitted from tsconfig in packages/db and apps/api — workspace boundary imports cross rootDir constraint
 - 01-01: next@15.2.3 pinned to patch CVE-2025-29927 (auth bypass in Next.js middleware)
+- [Phase 01-02]: @clerk/expo v2 exports signals-based useSignIn — stable API requires @clerk/expo/legacy import
+- [Phase 01-02]: Mobile tsconfig moduleResolution changed to bundler for @clerk/expo/legacy subpath export support
+- [Phase 01-02]: Role extracted from sessionClaims.metadata.role (JWT claim) — avoids per-request Clerk API call
 
 ### Pending Todos
 
@@ -62,6 +82,6 @@ None.
 
 ## Session Continuity
 
-Last session: 2026-03-25
-Stopped at: Completed 01-01-PLAN.md (monorepo scaffold + Wave 0 test stubs)
+Last session: 2026-03-25T23:23:01.740Z
+Stopped at: Completed 01-02-PLAN.md (full Clerk auth pipeline: API + web + mobile)
 Resume file: None
