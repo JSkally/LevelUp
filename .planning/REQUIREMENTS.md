@@ -10,10 +10,10 @@
 
 ### Foundation & Infrastructure
 
-- [ ] **INFRA-01**: Monorepo configured with Turborepo + pnpm workspaces (`apps/web`, `apps/mobile`, `apps/api`, `packages/db`, `packages/shared`)
-- [ ] **INFRA-02**: Shared Drizzle ORM schema in `packages/db` consumed by both API and type-safe clients
-- [ ] **INFRA-03**: Shared Zod validators and TypeScript types in `packages/shared`
-- [ ] **INFRA-04**: CI/CD pipeline via GitHub Actions (lint, type-check, test, build, deploy)
+- [x] **INFRA-01**: Monorepo configured with Turborepo + pnpm workspaces (`apps/web`, `apps/mobile`, `apps/api`, `packages/db`, `packages/shared`) — 01-01
+- [x] **INFRA-02**: Shared Drizzle ORM schema in `packages/db` consumed by both API and type-safe clients — 01-01
+- [x] **INFRA-03**: Shared Zod validators and TypeScript types in `packages/shared` — 01-01
+- [x] **INFRA-04**: CI/CD pipeline via GitHub Actions (lint, type-check, test, build, deploy) — 01-01 (workflow created; deploy step in 01-02+)
 - [ ] **INFRA-05**: Docker + AWS ECS Fargate deployment with Cloudflare CDN
 - [ ] **INFRA-06**: Sentry error monitoring + Grafana Cloud observability
 - [ ] **INFRA-07**: Expo EAS (Build + Update) for mobile deployment

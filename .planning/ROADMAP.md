@@ -35,7 +35,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans**: 3 plans
 
 Plans:
-- [ ] 01-01-PLAN.md — Turborepo + pnpm monorepo scaffold, CI/CD pipeline, Docker dev environment, Wave 0 test stubs
+- [x] 01-01-PLAN.md — Turborepo + pnpm monorepo scaffold, CI/CD pipeline, Docker dev environment, Wave 0 test stubs (completed 2026-03-25)
 - [ ] 01-02-PLAN.md — Clerk auth on web + mobile + Fastify API, role assignment webhook, JWT role enforcement
 - [ ] 01-03-PLAN.md — JSONB subscription tier system, tier gate middleware, TierGate UI component, Caribbean currency display
 
@@ -149,7 +149,7 @@ Phases execute in numeric order: 1 > 2 > 3 > 4 > 5 > 6 > 7
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation & Auth | 0/3 | Not started | - |
+| 1. Foundation & Auth | 1/3 | In progress | Plan 01 done 2026-03-25 |
 | 2. Coach Portal | 0/3 | Not started | - |
 | 3. Athlete Mobile & Offline Sync | 0/3 | Not started | - |
 | 4. VBT & 1RM Engine | 0/3 | Not started | - |
