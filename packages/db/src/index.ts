@@ -13,4 +13,5 @@ export const createDb = (connectionString: string) => {
 }
 
 export * from './schema/index.js'
+export { eq, sql, and, or, desc, asc } from 'drizzle-orm'
 export type { TierCapabilities } from '@repo/shared'
