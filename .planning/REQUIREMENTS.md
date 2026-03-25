@@ -30,12 +30,12 @@
 
 ### Subscription Tiers
 
-- [ ] **TIER-01**: Subscription tiers stored as JSONB capability map in `subscription_tiers` table (Base, Pro, Elite defaults)
-- [ ] **TIER-02**: Feature gating enforced at API middleware (hard 403 with machine-readable upgrade context)
-- [ ] **TIER-03**: Feature gating enforced at UI layer (soft gate showing locked state with upgrade prompt)
-- [ ] **TIER-04**: Admin can configure tier capabilities via visual tier editor without schema migrations
-- [ ] **TIER-05**: Tier-gated features include: messaging, VBT, analytics depth, program templates, readiness engine, multi-modality tracking, sport-specific assessments
-- [ ] **TIER-06**: Caribbean currency display in subscription management (JMD, TTD, BBD, GYD, BSD, XCD with USD as base)
+- [x] **TIER-01**: Subscription tiers stored as JSONB capability map in `subscription_tiers` table (Base, Pro, Elite defaults)
+- [x] **TIER-02**: Feature gating enforced at API middleware (hard 403 with machine-readable upgrade context)
+- [x] **TIER-03**: Feature gating enforced at UI layer (soft gate showing locked state with upgrade prompt)
+- [x] **TIER-04**: Admin can configure tier capabilities via visual tier editor without schema migrations
+- [x] **TIER-05**: Tier-gated features include: messaging, VBT, analytics depth, program templates, readiness engine, multi-modality tracking, sport-specific assessments
+- [x] **TIER-06**: Caribbean currency display in subscription management (JMD, TTD, BBD, GYD, BSD, XCD with USD as base)
 
 ### Teams & Organisation
 
@@ -293,12 +293,12 @@
 | AUTH-05 | Phase 1 | Complete |
 | AUTH-06 | Phase 1 | Complete |
 | AUTH-07 | Phase 1 | Complete |
-| TIER-01 | Phase 1 | Pending |
-| TIER-02 | Phase 1 | Pending |
-| TIER-03 | Phase 1 | Pending |
-| TIER-04 | Phase 1 | Pending |
-| TIER-05 | Phase 1 | Pending |
-| TIER-06 | Phase 1 | Pending |
+| TIER-01 | Phase 1 | Complete |
+| TIER-02 | Phase 1 | Complete |
+| TIER-03 | Phase 1 | Complete |
+| TIER-04 | Phase 1 | Complete |
+| TIER-05 | Phase 1 | Complete |
+| TIER-06 | Phase 1 | Complete |
 | EXLIB-01 | Phase 2 | Pending |
 | EXLIB-02 | Phase 2 | Pending |
 | EXLIB-03 | Phase 2 | Pending |

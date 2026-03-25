@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: "Completed 01-02-PLAN.md (full Clerk auth pipeline: API + web + mobile)"
-last_updated: "2026-03-25T23:23:01.742Z"
+stopped_at: "Completed 01-03-PLAN.md (tier gate system: middleware, seed, web components, Caribbean currency)"
+last_updated: "2026-03-25T23:31:50.951Z"
 last_activity: 2026-03-25 — Plan 01 completed (monorepo scaffold)
 progress:
   total_phases: 7
-  completed_phases: 0
+  completed_phases: 1
   total_plans: 3
-  completed_plans: 2
+  completed_plans: 3
   percent: 67
 ---
 
@@ -51,6 +51,7 @@ Progress: [███████░░░] 67%
 
 *Updated after each plan completion*
 | Phase 01-foundation-auth P02 | 4 min | 2 tasks | 19 files |
+| Phase 01-foundation-auth P03 | 6 min | 2 tasks | 14 files |
 
 ## Accumulated Context
 
@@ -69,6 +70,9 @@ Recent decisions affecting current work:
 - [Phase 01-02]: @clerk/expo v2 exports signals-based useSignIn — stable API requires @clerk/expo/legacy import
 - [Phase 01-02]: Mobile tsconfig moduleResolution changed to bundler for @clerk/expo/legacy subpath export support
 - [Phase 01-02]: Role extracted from sessionClaims.metadata.role (JWT claim) — avoids per-request Clerk API call
+- [Phase 01-03]: eq and drizzle-orm helpers re-exported from @repo/db to prevent dual-resolution TypeScript private property conflicts
+- [Phase 01-03]: UserWithTier type assertion in tierGate.ts — Drizzle findFirst with: {} return type doesn't surface relation in TypeScript without explicit annotation
+- [Phase 01-03]: Node.js ICU data formats JMD as 'JMD 100.00' not 'J$100.00' — currency tests use toContain() not exact symbol match
 
 ### Pending Todos
 
@@ -82,6 +86,6 @@ None.
 
 ## Session Continuity
 
-Last session: 2026-03-25T23:23:01.740Z
-Stopped at: Completed 01-02-PLAN.md (full Clerk auth pipeline: API + web + mobile)
+Last session: 2026-03-25T23:31:50.948Z
+Stopped at: Completed 01-03-PLAN.md (tier gate system: middleware, seed, web components, Caribbean currency)
 Resume file: None
