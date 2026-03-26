@@ -1,0 +1,14 @@
+name = "levelup-web"
+compatibility_date = "2024-01-01"
+
+[env.production]
+name = "levelup-web"
+
+# Cloudflare Pages deploys the Next.js build output
+# Build command: pnpm --filter @repo/web build
+# Build output: apps/web/.next
+# Framework preset: Next.js
+pages_build_output_dir = "apps/web/.next"
+
+# Custom domain (configure in Cloudflare Pages dashboard)
+# route = "app.levelup.gg/*"
