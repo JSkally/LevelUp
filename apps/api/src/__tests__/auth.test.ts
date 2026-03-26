@@ -3,7 +3,7 @@ import Fastify from 'fastify'
 
 // Mock @clerk/fastify before importing anything that uses it
 vi.mock('@clerk/fastify', () => ({
-  clerkPlugin: vi.fn(async (fastify: any) => {
+  clerkPlugin: vi.fn(async (_fastify: any) => {
     // No-op mock plugin
   }),
   getAuth: vi.fn(),

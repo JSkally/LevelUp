@@ -24,7 +24,8 @@ const clerkAuthPlugin: FastifyPluginAsync = async (fastify) => {
         if (!userId) {
           return reply.status(401).send({ error: 'Unauthorized' })
         }
-        const role = (sessionClaims as any)?.metadata?.role as UserRole | undefined
+        const claims = sessionClaims as { metadata?: { role?: string } } | null
+        const role = claims?.metadata?.role as UserRole | undefined
         if (!role || !allowedRoles.includes(role)) {
           return reply
             .status(403)

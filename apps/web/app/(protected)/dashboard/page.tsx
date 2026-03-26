@@ -2,7 +2,8 @@ import { auth } from '@clerk/nextjs/server'
 
 export default async function DashboardPage() {
   const { userId, sessionClaims } = await auth()
-  const role = (sessionClaims as any)?.metadata?.role ?? 'athlete'
+  const claims = sessionClaims as { metadata?: { role?: string } } | null
+  const role = claims?.metadata?.role ?? 'athlete'
 
   return (
     <main className="p-8">

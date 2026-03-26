@@ -29,7 +29,7 @@ const clerkWebhookRoutes: FastifyPluginAsync = async (fastify) => {
         'svix-timestamp': svixTimestamp,
         'svix-signature': svixSignature,
       }) as { type: string; data: { id: string } }
-    } catch (_err) {
+    } catch {
       return reply.status(400).send({ error: 'Invalid signature' })
     }
 

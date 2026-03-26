@@ -18,8 +18,9 @@ export default function SignUpScreen() {
         await setActive({ session: result.createdSessionId })
         router.replace('/(protected)')
       }
-    } catch (err: any) {
-      setError(err.errors?.[0]?.message ?? 'Sign up failed')
+    } catch (err) {
+      const clerkErr = err as { errors?: { message: string }[] }
+      setError(clerkErr.errors?.[0]?.message ?? 'Sign up failed')
     }
   }
 

@@ -20,6 +20,13 @@ module.exports = {
         'plugin:@typescript-eslint/recommended',
       ],
     },
+    {
+      // Test files legitimately use `any` for mock typing flexibility
+      files: ['**/*.test.ts', '**/*.test.tsx', '**/__tests__/**/*.ts', '**/__tests__/**/*.tsx'],
+      rules: {
+        '@typescript-eslint/no-explicit-any': 'off',
+      },
+    },
   ],
   ignorePatterns: [
     'node_modules/',

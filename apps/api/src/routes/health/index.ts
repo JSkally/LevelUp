@@ -13,7 +13,8 @@ const healthRoutes: FastifyPluginAsync = async (fastify) => {
     { preHandler: [fastify.authenticate] },
     async (request, _reply) => {
       const { userId, sessionClaims } = getAuth(request)
-      const role = (sessionClaims as any)?.metadata?.role
+      const claims = sessionClaims as { metadata?: { role?: string } } | null
+      const role = claims?.metadata?.role
       return { userId, role }
     },
   )
