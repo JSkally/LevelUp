@@ -1,0 +1,51 @@
+{
+  "family": "levelup-api",
+  "networkMode": "awsvpc",
+  "requiresCompatibilities": ["FARGATE"],
+  "cpu": "512",
+  "memory": "1024",
+  "executionRoleArn": "arn:aws:iam::ACCOUNT_ID:role/ecsTaskExecutionRole",
+  "taskRoleArn": "arn:aws:iam::ACCOUNT_ID:role/ecsTaskRole",
+  "containerDefinitions": [
+    {
+      "name": "levelup-api",
+      "image": "ACCOUNT_ID.dkr.ecr.REGION.amazonaws.com/levelup-api:latest",
+      "portMappings": [
+        {
+          "containerPort": 3001,
+          "protocol": "tcp"
+        }
+      ],
+      "essential": true,
+      "environment": [
+        { "name": "NODE_ENV", "value": "production" },
+        { "name": "PORT", "value": "3001" }
+      ],
+      "secrets": [
+        { "name": "DATABASE_URL", "valueFrom": "arn:aws:secretsmanager:REGION:ACCOUNT_ID:secret:levelup/DATABASE_URL" },
+        { "name": "REDIS_URL", "valueFrom": "arn:aws:secretsmanager:REGION:ACCOUNT_ID:secret:levelup/REDIS_URL" },
+        { "name": "CLERK_SECRET_KEY", "valueFrom": "arn:aws:secretsmanager:REGION:ACCOUNT_ID:secret:levelup/CLERK_SECRET_KEY" },
+        { "name": "CLERK_WEBHOOK_SECRET", "valueFrom": "arn:aws:secretsmanager:REGION:ACCOUNT_ID:secret:levelup/CLERK_WEBHOOK_SECRET" },
+        { "name": "SENTRY_DSN", "valueFrom": "arn:aws:secretsmanager:REGION:ACCOUNT_ID:secret:levelup/SENTRY_DSN" },
+        { "name": "GRAFANA_LOKI_URL", "valueFrom": "arn:aws:secretsmanager:REGION:ACCOUNT_ID:secret:levelup/GRAFANA_LOKI_URL" },
+        { "name": "GRAFANA_LOKI_USER", "valueFrom": "arn:aws:secretsmanager:REGION:ACCOUNT_ID:secret:levelup/GRAFANA_LOKI_USER" },
+        { "name": "GRAFANA_LOKI_PASSWORD", "valueFrom": "arn:aws:secretsmanager:REGION:ACCOUNT_ID:secret:levelup/GRAFANA_LOKI_PASSWORD" }
+      ],
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/levelup-api",
+          "awslogs-region": "REGION",
+          "awslogs-stream-prefix": "ecs"
+        }
+      },
+      "healthCheck": {
+        "command": ["CMD-SHELL", "curl -f http://localhost:3001/api/health || exit 1"],
+        "interval": 30,
+        "timeout": 5,
+        "retries": 3,
+        "startPeriod": 60
+      }
+    }
+  ]
+}
