@@ -25,6 +25,14 @@
       "bundler": "metro"
     },
     "plugins": ["expo-router", "expo-secure-store"],
-    "scheme": "level"
+    "scheme": "level",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/your-project-id",
+      "enabled": true,
+      "fallbackToCacheTimeout": 0
+    }
   }
 }
