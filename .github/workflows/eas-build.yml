@@ -28,5 +28,10 @@ jobs:
 
       - run: pnpm install --frozen-lockfile
 
-      - run: eas build --platform all --non-interactive
+      - name: Build app
+        run: eas build --platform all --non-interactive
+        working-directory: apps/mobile
+
+      - name: Publish OTA update
+        run: eas update --channel production --message "Release from CI commit ${{ github.sha }}" --non-interactive
         working-directory: apps/mobile
