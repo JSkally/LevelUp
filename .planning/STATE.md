@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 01-05-PLAN.md (Sentry web wiring + Grafana Loki integration)
-last_updated: "2026-03-26T23:34:31.628Z"
+stopped_at: Completed 01-04-PLAN.md (admin role management API + web UI, zero lint errors)
+last_updated: "2026-03-26T23:44:23.393Z"
 last_activity: 2026-03-25 — Plan 01 completed (monorepo scaffold)
 progress:
   total_phases: 7
   completed_phases: 0
   total_plans: 7
-  completed_plans: 5
+  completed_plans: 6
   percent: 67
 ---
 
@@ -54,6 +54,7 @@ Progress: [███████░░░] 67%
 | Phase 01-foundation-auth P03 | 6 min | 2 tasks | 14 files |
 | Phase 01-foundation-auth P06 | 3 | 2 tasks | 4 files |
 | Phase 01-foundation-auth P05 | 15 | 2 tasks | 7 files |
+| Phase 01-foundation-auth P04 | 12 min | 2 tasks | 14 files |
 
 ## Accumulated Context
 
@@ -78,6 +79,10 @@ Recent decisions affecting current work:
 - [Phase 01-06]: expo-updates pinned to ~0.26.0 for Expo SDK 52 compatibility; runtimeVersion policy appVersion; update.url uses placeholder until eas init is run
 - [Phase 01-foundation-auth]: @sentry/nextjs v9 removed hideSourceMaps option — use sourcemaps.deleteSourcemapsAfterUpload instead
 - [Phase 01-foundation-auth]: pino-loki transport configured at Fastify logger init, not in plugin — plugin only validates credentials and logs startup status
+- [Phase 01-04]: Typed assertion pattern for sessionClaims: const claims = sessionClaims as { metadata?: { role?: string } } | null — avoids as any consistently
+- [Phase 01-04]: Root ESLint override disables no-explicit-any for test file patterns — test mocks require any for vi.mocked() flexibility
+- [Phase 01-04]: export const dynamic = force-dynamic in protected layout.tsx — Clerk auth() cannot run at build time, prevents prerender failures
+- [Phase 01-04]: webpack extensionAlias .js -> .ts in next.config.ts — TypeScript ESM NodeNext moduleResolution requires .js imports; webpack needs alias to resolve to .ts source
 
 ### Pending Todos
 
@@ -91,6 +96,6 @@ None.
 
 ## Session Continuity
 
-Last session: 2026-03-26T23:34:31.625Z
-Stopped at: Completed 01-05-PLAN.md (Sentry web wiring + Grafana Loki integration)
+Last session: 2026-03-26T23:44:23.390Z
+Stopped at: Completed 01-04-PLAN.md (admin role management API + web UI, zero lint errors)
 Resume file: None
