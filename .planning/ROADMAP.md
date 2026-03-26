@@ -12,7 +12,7 @@ Level ships in seven phases, ordered by dependency chains and risk isolation. Fo
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [x] **Phase 1: Foundation & Auth** - Monorepo, Clerk auth, role system, subscription tiers, CI/CD, database schema (completed 2026-03-25)
+- [ ] **Phase 1: Foundation & Auth** - Monorepo, Clerk auth, role system, subscription tiers, CI/CD, database schema (gap closure in progress)
 - [ ] **Phase 2: Coach Portal** - Exercise library with search/video, program builder with drag-and-drop, team management
 - [ ] **Phase 3: Athlete Mobile & Offline Sync** - Workout logging, offline-first with WatermelonDB, post-session feedback, multi-modality logging
 - [ ] **Phase 4: VBT & 1RM Engine** - On-device bar tracking via computer vision, velocity display, 1RM estimation
@@ -32,12 +32,16 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. Admin can assign and change user roles (Athlete, Trainer, Admin, Assistant Coach) and the role is enforced at the API
   4. A tier-gated API endpoint returns 403 with upgrade context for unauthorized tiers, and the UI shows a locked state with upgrade prompt
   5. CI pipeline runs lint, type-check, test, and build on every push; mobile builds via EAS
-**Plans**: 3 plans
+**Plans**: 7 plans (3 original + 4 gap closure)
 
 Plans:
 - [x] 01-01-PLAN.md — Turborepo + pnpm monorepo scaffold, CI/CD pipeline, Docker dev environment, Wave 0 test stubs (completed 2026-03-25)
-- [ ] 01-02-PLAN.md — Clerk auth on web + mobile + Fastify API, role assignment webhook, JWT role enforcement
-- [ ] 01-03-PLAN.md — JSONB subscription tier system, tier gate middleware, TierGate UI component, Caribbean currency display
+- [x] 01-02-PLAN.md — Clerk auth on web + mobile + Fastify API, role assignment webhook, JWT role enforcement (completed 2026-03-25)
+- [x] 01-03-PLAN.md — JSONB subscription tier system, tier gate middleware, TierGate UI component, Caribbean currency display (completed 2026-03-25)
+- [ ] 01-04-PLAN.md — AUTH-06 admin role API + web UI + lint fixes (gap closure)
+- [ ] 01-05-PLAN.md — INFRA-06 Sentry web wiring + Grafana Cloud Loki integration (gap closure)
+- [ ] 01-06-PLAN.md — INFRA-07 EAS Update OTA config: eas.json + expo-updates + CI step (gap closure)
+- [ ] 01-07-PLAN.md — INFRA-05 ECS Fargate task definition + Cloudflare Pages + deploy workflow (gap closure)
 
 ### Phase 2: Coach Portal
 **Goal**: A trainer can build a complete program using the exercise library, organize athletes into teams, and assign programs -- the full coach web experience before any mobile athlete work.
@@ -149,7 +153,7 @@ Phases execute in numeric order: 1 > 2 > 3 > 4 > 5 > 6 > 7
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation & Auth | 3/3 | Complete   | 2026-03-25 |
+| 1. Foundation & Auth | 3/7 | Gap closure in progress | - |
 | 2. Coach Portal | 0/3 | Not started | - |
 | 3. Athlete Mobile & Offline Sync | 0/3 | Not started | - |
 | 4. VBT & 1RM Engine | 0/3 | Not started | - |
