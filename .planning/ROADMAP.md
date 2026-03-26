@@ -12,7 +12,7 @@ Level ships in seven phases, ordered by dependency chains and risk isolation. Fo
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Foundation & Auth** - Monorepo, Clerk auth, role system, subscription tiers, CI/CD, database schema (gap closure in progress)
+- [x] **Phase 1: Foundation & Auth** - Monorepo, Clerk auth, role system, subscription tiers, CI/CD, database schema (gap closure in progress) (completed 2026-03-26)
 - [ ] **Phase 2: Coach Portal** - Exercise library with search/video, program builder with drag-and-drop, team management
 - [ ] **Phase 3: Athlete Mobile & Offline Sync** - Workout logging, offline-first with WatermelonDB, post-session feedback, multi-modality logging
 - [ ] **Phase 4: VBT & 1RM Engine** - On-device bar tracking via computer vision, velocity display, 1RM estimation
@@ -153,7 +153,7 @@ Phases execute in numeric order: 1 > 2 > 3 > 4 > 5 > 6 > 7
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation & Auth | 6/7 | In Progress|  |
+| 1. Foundation & Auth | 7/7 | Complete   | 2026-03-26 |
 | 2. Coach Portal | 0/3 | Not started | - |
 | 3. Athlete Mobile & Offline Sync | 0/3 | Not started | - |
 | 4. VBT & 1RM Engine | 0/3 | Not started | - |

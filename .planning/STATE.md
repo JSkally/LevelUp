@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 01-04-PLAN.md (admin role management API + web UI, zero lint errors)
-last_updated: "2026-03-26T23:44:23.393Z"
+stopped_at: Completed 01-07-PLAN.md (ECS Fargate task definition + GitHub Actions deploy workflow + Cloudflare Pages config)
+last_updated: "2026-03-26T23:47:58.697Z"
 last_activity: 2026-03-25 — Plan 01 completed (monorepo scaffold)
 progress:
   total_phases: 7
-  completed_phases: 0
+  completed_phases: 1
   total_plans: 7
-  completed_plans: 6
+  completed_plans: 7
   percent: 67
 ---
 
@@ -55,6 +55,7 @@ Progress: [███████░░░] 67%
 | Phase 01-foundation-auth P06 | 3 | 2 tasks | 4 files |
 | Phase 01-foundation-auth P05 | 15 | 2 tasks | 7 files |
 | Phase 01-foundation-auth P04 | 12 min | 2 tasks | 14 files |
+| Phase 01-foundation-auth P07 | 3 | 2 tasks | 7 files |
 
 ## Accumulated Context
 
@@ -83,6 +84,8 @@ Recent decisions affecting current work:
 - [Phase 01-04]: Root ESLint override disables no-explicit-any for test file patterns — test mocks require any for vi.mocked() flexibility
 - [Phase 01-04]: export const dynamic = force-dynamic in protected layout.tsx — Clerk auth() cannot run at build time, prevents prerender failures
 - [Phase 01-04]: webpack extensionAlias .js -> .ts in next.config.ts — TypeScript ESM NodeNext moduleResolution requires .js imports; webpack needs alias to resolve to .ts source
+- [Phase 01-07]: OIDC role assumption used for AWS auth in GitHub Actions — no long-lived AWS_ACCESS_KEY_ID/SECRET stored as secrets
+- [Phase 01-07]: ECS secrets pulled from AWS Secrets Manager via valueFrom ARNs — no plaintext env vars in ECS task definition
 
 ### Pending Todos
 
@@ -96,6 +99,6 @@ None.
 
 ## Session Continuity
 
-Last session: 2026-03-26T23:44:23.390Z
-Stopped at: Completed 01-04-PLAN.md (admin role management API + web UI, zero lint errors)
+Last session: 2026-03-26T23:47:58.695Z
+Stopped at: Completed 01-07-PLAN.md (ECS Fargate task definition + GitHub Actions deploy workflow + Cloudflare Pages config)
 Resume file: None
