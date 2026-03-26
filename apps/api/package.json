@@ -23,6 +23,7 @@
     "fastify-plugin": "^5",
     "ioredis": "^5",
     "pg": "^8.11.3",
+    "pino-loki": "^3.0.0",
     "svix": "^1"
   },
   "devDependencies": {
