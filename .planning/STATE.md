@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: "Completed 01-06-PLAN.md (EAS Update OTA configuration: expo-updates, eas.json, CI publish step)"
-last_updated: "2026-03-26T23:32:47.334Z"
+stopped_at: Completed 01-05-PLAN.md (Sentry web wiring + Grafana Loki integration)
+last_updated: "2026-03-26T23:34:31.628Z"
 last_activity: 2026-03-25 — Plan 01 completed (monorepo scaffold)
 progress:
   total_phases: 7
   completed_phases: 0
   total_plans: 7
-  completed_plans: 4
+  completed_plans: 5
   percent: 67
 ---
 
@@ -53,6 +53,7 @@ Progress: [███████░░░] 67%
 | Phase 01-foundation-auth P02 | 4 min | 2 tasks | 19 files |
 | Phase 01-foundation-auth P03 | 6 min | 2 tasks | 14 files |
 | Phase 01-foundation-auth P06 | 3 | 2 tasks | 4 files |
+| Phase 01-foundation-auth P05 | 15 | 2 tasks | 7 files |
 
 ## Accumulated Context
 
@@ -75,6 +76,8 @@ Recent decisions affecting current work:
 - [Phase 01-03]: UserWithTier type assertion in tierGate.ts — Drizzle findFirst with: {} return type doesn't surface relation in TypeScript without explicit annotation
 - [Phase 01-03]: Node.js ICU data formats JMD as 'JMD 100.00' not 'J$100.00' — currency tests use toContain() not exact symbol match
 - [Phase 01-06]: expo-updates pinned to ~0.26.0 for Expo SDK 52 compatibility; runtimeVersion policy appVersion; update.url uses placeholder until eas init is run
+- [Phase 01-foundation-auth]: @sentry/nextjs v9 removed hideSourceMaps option — use sourcemaps.deleteSourcemapsAfterUpload instead
+- [Phase 01-foundation-auth]: pino-loki transport configured at Fastify logger init, not in plugin — plugin only validates credentials and logs startup status
 
 ### Pending Todos
 
@@ -88,6 +91,6 @@ None.
 
 ## Session Continuity
 
-Last session: 2026-03-26T23:32:47.332Z
-Stopped at: Completed 01-06-PLAN.md (EAS Update OTA configuration: expo-updates, eas.json, CI publish step)
+Last session: 2026-03-26T23:34:31.625Z
+Stopped at: Completed 01-05-PLAN.md (Sentry web wiring + Grafana Loki integration)
 Resume file: None

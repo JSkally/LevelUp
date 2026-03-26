@@ -15,7 +15,7 @@
 - [x] **INFRA-03**: Shared Zod validators and TypeScript types in `packages/shared` — 01-01
 - [x] **INFRA-04**: CI/CD pipeline via GitHub Actions (lint, type-check, test, build, deploy) — 01-01 (workflow created; deploy step in 01-02+)
 - [ ] **INFRA-05**: Docker + AWS ECS Fargate deployment with Cloudflare CDN
-- [ ] **INFRA-06**: Sentry error monitoring + Grafana Cloud observability
+- [x] **INFRA-06**: Sentry error monitoring + Grafana Cloud observability
 - [x] **INFRA-07**: Expo EAS (Build + Update) for mobile deployment
 
 ### Authentication & User Management
@@ -284,7 +284,7 @@
 | INFRA-03 | Phase 1 | Pending |
 | INFRA-04 | Phase 1 | Pending |
 | INFRA-05 | Phase 1 | Pending |
-| INFRA-06 | Phase 1 | Pending |
+| INFRA-06 | Phase 1 | Complete |
 | INFRA-07 | Phase 1 | Complete |
 | AUTH-01 | Phase 1 | Complete |
 | AUTH-02 | Phase 1 | Complete |

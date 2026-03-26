@@ -153,7 +153,7 @@ Phases execute in numeric order: 1 > 2 > 3 > 4 > 5 > 6 > 7
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation & Auth | 4/7 | In Progress|  |
+| 1. Foundation & Auth | 5/7 | In Progress|  |
 | 2. Coach Portal | 0/3 | Not started | - |
 | 3. Athlete Mobile & Offline Sync | 0/3 | Not started | - |
 | 4. VBT & 1RM Engine | 0/3 | Not started | - |
