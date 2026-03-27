@@ -166,6 +166,16 @@ completed: "2026-03-26"
 - Web build succeeds locally with placeholder env vars
 - Phase 2 (Program Builder) can proceed without auth/lint blockers
 
+## Self-Check: PASSED
+
+- apps/api/src/routes/admin/users.ts: FOUND
+- apps/api/src/routes/admin/users.test.ts: FOUND
+- apps/web/app/(protected)/admin/users/page.tsx: FOUND
+- .planning/phases/01-foundation-auth/01-04-SUMMARY.md: FOUND
+- Commit e47a375 (Task 1): FOUND
+- Commit dddf4e5 (Task 2): FOUND
+- Commit 38e52df (metadata): FOUND
+
 ---
 *Phase: 01-foundation-auth*
 *Completed: 2026-03-26*
