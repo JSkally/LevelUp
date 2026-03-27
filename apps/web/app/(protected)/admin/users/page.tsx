@@ -1,4 +1,5 @@
 import { redirect } from 'next/navigation'
+import { auth } from '@clerk/nextjs/server'
 import { requireRole } from '@/lib/auth'
 
 interface ClerkUser {
@@ -12,7 +13,12 @@ const ROLES = ['athlete', 'trainer', 'admin', 'assistant_coach'] as const
 async function fetchUsers(): Promise<ClerkUser[]> {
   const apiUrl = process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:3001'
   try {
-    const res = await fetch(`${apiUrl}/api/admin/users`, { cache: 'no-store' })
+    const { getToken } = await auth()
+    const token = await getToken()
+    const res = await fetch(`${apiUrl}/api/admin/users`, {
+      cache: 'no-store',
+      headers: { Authorization: `Bearer ${token}` },
+    })
     if (!res.ok) return []
     return res.json()
   } catch {
@@ -71,10 +77,15 @@ export default async function AdminUsersPage() {
                         'use server'
                         const apiUrl =
                           process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:3001'
+                        const { getToken } = await auth()
+                        const token = await getToken()
                         const newRole = formData.get('role') as string
                         await fetch(`${apiUrl}/api/admin/users/${user.id}/role`, {
                           method: 'PUT',
-                          headers: { 'Content-Type': 'application/json' },
+                          headers: {
+                            'Content-Type': 'application/json',
+                            Authorization: `Bearer ${token}`,
+                          },
                           body: JSON.stringify({ role: newRole }),
                         })
                       }}
