@@ -1,4 +1,5 @@
 import { redirect } from 'next/navigation'
+import { auth } from '@clerk/nextjs/server'
 import { requireRole } from '@/lib/auth'
 import { DEFAULT_TIERS } from '@repo/shared'
 
@@ -11,7 +12,12 @@ interface Tier {
 async function fetchTiers(): Promise<Tier[]> {
   const apiUrl = process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:3001'
   try {
-    const res = await fetch(`${apiUrl}/api/tiers`, { cache: 'no-store' })
+    const { getToken } = await auth()
+    const token = await getToken()
+    const res = await fetch(`${apiUrl}/api/tiers`, {
+      cache: 'no-store',
+      headers: { Authorization: `Bearer ${token}` },
+    })
     if (!res.ok) return []
     return res.json()
   } catch {
@@ -49,6 +55,8 @@ export default async function AdminTiersPage() {
               action={async (formData: FormData) => {
                 'use server'
                 const apiUrl = process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:3001'
+                const { getToken } = await auth()
+                const token = await getToken()
                 const updated: Record<string, unknown> = {}
                 const defaultBase = DEFAULT_TIERS['base']
                 for (const key of capabilityKeys) {
@@ -64,7 +72,10 @@ export default async function AdminTiersPage() {
                 }
                 const res = await fetch(`${apiUrl}/api/tiers/${tier.id}`, {
                   method: 'PUT',
-                  headers: { 'Content-Type': 'application/json' },
+                  headers: {
+                    'Content-Type': 'application/json',
+                    Authorization: `Bearer ${token}`,
+                  },
                   body: JSON.stringify(updated),
                 })
                 if (!res.ok) throw new Error('Failed to update tier')
