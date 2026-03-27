@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 01-07-PLAN.md (ECS Fargate task definition + GitHub Actions deploy workflow + Cloudflare Pages config)
-last_updated: "2026-03-26T23:47:58.697Z"
+stopped_at: Completed 01-08-PLAN.md (Server Action auth token forwarding for admin users and tiers pages)
+last_updated: "2026-03-27T01:05:56.201Z"
 last_activity: 2026-03-25 — Plan 01 completed (monorepo scaffold)
 progress:
   total_phases: 7
   completed_phases: 1
-  total_plans: 7
-  completed_plans: 7
+  total_plans: 8
+  completed_plans: 8
   percent: 67
 ---
 
@@ -56,6 +56,7 @@ Progress: [███████░░░] 67%
 | Phase 01-foundation-auth P05 | 15 | 2 tasks | 7 files |
 | Phase 01-foundation-auth P04 | 12 min | 2 tasks | 14 files |
 | Phase 01-foundation-auth P07 | 3 | 2 tasks | 7 files |
+| Phase 01-foundation-auth P08 | 2 | 2 tasks | 2 files |
 
 ## Accumulated Context
 
@@ -86,6 +87,7 @@ Recent decisions affecting current work:
 - [Phase 01-04]: webpack extensionAlias .js -> .ts in next.config.ts — TypeScript ESM NodeNext moduleResolution requires .js imports; webpack needs alias to resolve to .ts source
 - [Phase 01-07]: OIDC role assumption used for AWS auth in GitHub Actions — no long-lived AWS_ACCESS_KEY_ID/SECRET stored as secrets
 - [Phase 01-07]: ECS secrets pulled from AWS Secrets Manager via valueFrom ARNs — no plaintext env vars in ECS task definition
+- [Phase 01-foundation-auth]: auth() from @clerk/nextjs/server works in Server Components and Server Actions — same getToken() pattern for both, forward as Authorization: Bearer in all admin API fetch calls
 
 ### Pending Todos
 
@@ -99,6 +101,6 @@ None.
 
 ## Session Continuity
 
-Last session: 2026-03-26T23:47:58.695Z
-Stopped at: Completed 01-07-PLAN.md (ECS Fargate task definition + GitHub Actions deploy workflow + Cloudflare Pages config)
+Last session: 2026-03-27T01:05:56.199Z
+Stopped at: Completed 01-08-PLAN.md (Server Action auth token forwarding for admin users and tiers pages)
 Resume file: None
